@@ -1,3 +1,7 @@
+module;
+
+#include <vector>
+
 module EShop; // implementation unit of module EShop
 
 double Customer::total_price() const

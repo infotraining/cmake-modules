@@ -6,6 +6,7 @@ export module Shapes:Square;
 
 import :Base;
 import :Rectangle;
+import :Point;
 
 namespace Shapes
 {

@@ -2,8 +2,6 @@ export module Shapes:Base;
 
 import :Point;
 
-import std;
-
 export 
 namespace Shapes
 {

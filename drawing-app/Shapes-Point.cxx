@@ -1,6 +1,8 @@
-export module Shapes:Point;
+module;
 
-import std;
+#include <iostream>
+
+export module Shapes:Point;
 
 export
 namespace Shapes

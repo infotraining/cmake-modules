@@ -7,14 +7,6 @@ project(drawing-app LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(std_lib)
-
-target_sources(std_lib
-  PUBLIC
-    FILE_SET CXX_MODULES FILES
-    std.cxx
-)
-
 add_library(singleton_lib)
 
 target_sources(singleton_lib
@@ -31,7 +23,7 @@ target_sources(factory_lib
     Factory.cxx
 )
 
-target_link_libraries(factory_lib PUBLIC std_lib singleton_lib)
+target_link_libraries(factory_lib PUBLIC singleton_lib)
 
 add_library(drawing_lib)
 
@@ -46,7 +38,7 @@ target_sources(drawing_lib
     Shapes-Rectangle.cxx
 )
 
-target_link_libraries(drawing_lib PUBLIC std_lib factory_lib)
+target_link_libraries(drawing_lib PUBLIC factory_lib)
 
 add_executable(drawing_app DrawingApp.cpp)
 target_link_libraries(drawing_app PRIVATE drawing_lib)

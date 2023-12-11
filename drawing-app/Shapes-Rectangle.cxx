@@ -1,8 +1,11 @@
+module;
+
+#include <iostream>
+
 export module Shapes:Rectangle;
 
 import :Base;
 import :Point;
-import std;
 
 export
 namespace Shapes

@@ -1,6 +1,12 @@
+module;
+
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <functional>
+
 export module Factory;
  
-
 export 
 template <typename TProduct, typename TId = std::string, typename TCreator = std::function<std::unique_ptr<TProduct>()>>
 class GenericFactory
